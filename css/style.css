@@ -1,0 +1,155 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+
+  font-family: 'Inter', sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscate;
+  -webkit-text-size-adjust: 100%;
+}
+::-webkit-scrollbar {
+  width: .6rem;
+  border-radius: .5rem;
+  background-color: hsl(207, 4%, 75%);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: hsl(207, 4%, 65%);
+  border-radius: .5rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: hsl(207, 4%, 55%);
+  border-radius: .5rem;
+}
+
+
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  background-color: #0F172A;
+}
+
+main {
+  padding: 2rem;
+  max-width: 64rem;
+  width: 100%;
+  margin: 0 auto 6.4rem;
+}
+
+header {
+  margin-top: 6.4rem;
+  padding-bottom: 2.4rem;
+  border-bottom: 1px solid #334155;
+}
+
+header h1 {
+  margin: 2.4rem;
+  font-size: 3rem;
+  color: #F1F5F9;
+}
+
+input {
+  all: unset;
+  border: 1px solid #94A3B8;
+  width: 1.6rem;
+  height: 1.6rem;
+
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+
+  cursor: pointer;
+}
+
+input:checked {
+  border: 1px solid #A3E635;
+}
+
+input:checked:before {
+  content: "";
+  width: 1rem;
+  height: 1rem;
+  background-color: #A3E635;
+  border-radius: 50%;
+}
+
+#quiz {
+  counter-reset: quiz-item;
+}
+
+
+.quiz-item {
+  margin-top: 2.4rem;
+  border: 1px solid #475569;
+  border-radius: .6rem;
+
+  overflow: hidden;
+}
+
+.quiz-item h3 {
+  padding: 1.6rem 2rem;
+  color: #E2E8F0;
+
+  display: flex;
+  align-content: center;
+  gap: 1.2rem;
+
+  background-color: #1E293B;
+}
+
+.quiz-item h3:before {
+  counter-increment: quiz-item;
+  content: counter(quiz-item);
+
+  background-color: #475569;
+  width: 2.8rem;
+  height: 2.8rem;
+  border-radius: 50%;
+  font-weight: 700;
+  font-size: 1.2rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.quiz-item dl {
+  padding: 2rem 2.4rem;
+
+  display: grid;
+  gap: .8rem;
+}
+
+.quiz-item dl dt {
+  font-size: 1.4rem;
+  line-height: 2.4rem;
+  letter-spacing: 0;
+
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+  color: #E2E8F0;
+}
+
+
+#acertos {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+
+  text-align: center;
+  padding: 1.2rem;
+  background-color: #A3E635;
+}
